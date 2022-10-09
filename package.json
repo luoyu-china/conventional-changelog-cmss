@@ -1,16 +1,16 @@
 {
   "author": {
-    "name": "Steve Mao",
-    "email": "maochenyan@gmail.com",
-    "url": "https://github.com/stevemao"
+    "name": "luoyu-china",
+    "email": "xxx@qq.com",
+    "url": "https://github.com/luoyu-china"
   },
-  "bugs": "https://github.com/conventional-changelog/conventional-changelog/issues",
+  "bugs": "https://github.com/luoyu-china/conventional-changelog-cmss/issues",
   "description": "Generate a changelog from git metadata",
   "engines": {
     "node": ">=10"
   },
   "files": [],
-  "homepage": "https://github.com/conventional-changelog/conventional-changelog#readme",
+  "homepage": "https://github.com/luoyu-china/conventional-changelog-cmss#readme",
   "keywords": [
     "conventional-changelog",
     "readme",
@@ -18,8 +18,7 @@
   ],
   "license": "ISC",
   "main": "",
-  "name": "conventional-changelog-monorepo",
-  "private": true,
+  "name": "conventional-changelog-cmss",
   "renovate": {
     "extends": [
       "config:base",
@@ -32,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/conventional-changelog/conventional-changelog.git"
+    "url": "https://github.com/luoyu-china/conventional-changelog-cmss.git"
   },
   "scripts": {
     "lint": "eslint . --cache --cache-location ./node_modules/.cache/ --ignore-path .gitignore",
