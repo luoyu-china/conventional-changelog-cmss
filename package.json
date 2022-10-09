@@ -9,7 +9,7 @@
   "engines": {
     "node": ">=10"
   },
-  "files": [],
+  "files": ["packages", "scripts", "tools"],
   "homepage": "https://github.com/luoyu-china/conventional-changelog-cmss#readme",
   "keywords": [
     "conventional-changelog",
