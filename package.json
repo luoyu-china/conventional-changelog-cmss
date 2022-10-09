@@ -41,7 +41,7 @@
     "test-windows": "c8 mocha --timeout 60000 packages/*/test{,/*}.js",
     "postinstall": "bash scripts/install.sh"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "devDependencies": {
     "better-than-before": "^1.0.0",
     "c8": "^7.1.2",
