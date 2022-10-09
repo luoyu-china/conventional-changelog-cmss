@@ -47,6 +47,8 @@ function getReferences (input, regex) {
   const references = []
   let referenceSentences
   let referenceMatch
+  //为了实现定制差异化，使现有commit格式能解析出issue
+  let referenceParts = /Jira:(?:.*?)??\s*([\w-\.\/]*?)??(#?)([\w-]*\d+)/gi
 
   const reApplicable = input.match(regex.references) !== null
     ? regex.references
@@ -55,8 +57,11 @@ function getReferences (input, regex) {
   while ((referenceSentences = reApplicable.exec(input))) {
     const action = referenceSentences[1] || null
     const sentence = referenceSentences[2]
-
-    while ((referenceMatch = regex.referenceParts.exec(sentence))) {
+    //为了实现定制差异化，使现有commit格式能解析出issue
+    //Jira: AAA-123 不符合angular commit格式规范，无法解析到jira issue；
+    //regex.referenceParts.exec(sentence) 必须要有 # 号才能解析到 #AAA-123，
+    //强行修改referenceParts，将 regex.referenceParts.exec(sentence) 改为 referenceParts.exec(sentence)
+    while ((referenceMatch = referenceParts.exec(sentence))) {
       let owner = null
       let repository = referenceMatch[1] || ''
       const ownerRepo = repository.split('/')

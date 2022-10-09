@@ -18,9 +18,10 @@ function assignOpts (options) {
       'fixed',
       'resolve',
       'resolves',
-      'resolved'
+      'resolved',
+      'jira'
     ],
-    issuePrefixes: ['#'],
+    issuePrefixes: ['#', 'jira: '],
     noteKeywords: ['BREAKING CHANGE', 'BREAKING-CHANGE'],
     fieldPattern: /^-(.*?)-$/,
     revertPattern: /^Revert\s"([\s\S]*)"\s*This reverts commit (\w*)\./,

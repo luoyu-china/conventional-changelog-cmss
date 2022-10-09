@@ -37,9 +37,8 @@ function conventionalChangelogWriterInit (context, options) {
     doFlush: true,
     mainTemplate: readFileSync(join(__dirname, 'templates/template.hbs'), 'utf-8'),
     headerPartial: readFileSync(join(__dirname, 'templates/header.hbs'), 'utf-8'),
-    commitPartial: readFileSync(join(__dirname, 'templates/commit.hbs'), 'utf-8'),
     footerPartial: readFileSync(join(__dirname, 'templates/footer.hbs'), 'utf-8')
-  }, options)
+  }, options, {commitPartial: readFileSync(join(__dirname, 'templates/commit.hbs'), 'utf-8')})
 
   if ((!_.isFunction(options.transform) && _.isObject(options.transform)) || _.isUndefined(options.transform)) {
     options.transform = _.assign({
